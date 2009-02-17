@@ -1,0 +1,12 @@
+development:
+  adapter: mysql
+  database: factualfacts_development
+  encoding: utf8
+test:
+  adapter: mysql
+  database: factualfacts_test
+  encoding: utf8
+production:
+  adapter: mysql
+  database: factualfacts_production
+  encoding: utf8

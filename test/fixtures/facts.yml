@@ -1,0 +1,8 @@
+earth_rotates:
+  body: The earth rotates around the sun.
+  created_at: 2009-02-01 12:00:00
+  updated_at: 2009-02-01 12:00:00
+apple_iphone:
+  body: Apple is working on a new iPhone.
+  created_at: 2009-02-02 12:00:00
+  updated_at: 2009-02-02 12:00:00

@@ -1,0 +1,8 @@
+<% form_for_with_record_identifier @fact do |form| %>
+  <%= error_messages_for :form %>
+  <div>
+    <%= form.text_field :body, :size => 50, :class => 'big' %>
+    <%= submit_tag 'Post', :name => nil %>
+  </div>
+<% end %>
+<%= javascript_tag "document.getElementById('fact_body').focus();" %>

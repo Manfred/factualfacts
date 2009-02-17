@@ -1,0 +1,52 @@
+/* Layout */
+html,
+body
+{
+  margin: 0;
+  padding: 0;
+}
+#container
+{
+  margin: 0px 16px 16px 16px;
+}
+#header
+{
+  float: right;
+}
+#header h1
+{
+  margin: 8px 0px 0px 8px;
+}
+#content
+{
+  float: left;
+}
+p.fact span.date
+{
+}
+/* Typography */
+html,
+body
+{
+  font: 16px/18px Courier New, Courier, Serif;
+  color: #000;
+  background-color: #fff;
+}
+/* Facts */
+p.fact
+{
+  font: 20px/24px Courier new, Courier, Serif;
+  margin: 16px 0px 16px 0px;
+  padding: 0px 8px 8px 8px;
+}
+p.fact span.date
+{
+  font: 12px/14px Courier new, Courier, Serif;
+  margin: 0px 0px 8px 0px;
+  display: block;
+}
+/* Forms */
+input.big
+{
+  font: 20px/24px Courier new, Courier, Serif;
+}

@@ -1,0 +1,27 @@
+= Forestwatcher =
+
+The Rails Forestwatcher plugins hooks into Rails' exception handling and posts any production errors to the specified URL. To capture these exception posts we've also written a small Camping application:
+
+  https://fngtps.com/svn/forestwatcher/trunk
+  
+The plugin adds two methods to you application. You can either post all exceptions to Forestwatcher:
+
+  class ApplicationController < ActionController::Base
+    report_errors_to 'https://fwatch.com/myappname'
+  end
+
+Optionally it supports HTTP Basic Authentication:
+
+  class ApplicationController < ActionController::Base
+    report_errors_to 'https://fwatch.com/myappname', :username => 'john', :password => 'secret'
+  end
+
+You can also post exceptions from your controllers:
+
+  class WebserviceRequest < ApplicationController
+    def create
+      Webservice.post(params[:webservice])
+    rescue Webservice::Exception => e
+      post_exception :url => 'https://fwatch.com/myappname-webservice-create', :exception => e, :environment => request.env, :params => params
+    end
+  end

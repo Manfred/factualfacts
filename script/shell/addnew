@@ -1,0 +1,4 @@
+#!/bin/sh
+
+#for file in `svn st | grep -e "^?" | cut -c 8-`; do echo $file; svn add $file; done
+svn st | grep -e "^?" | cut -c 8-
